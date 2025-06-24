@@ -4,19 +4,21 @@ export default async function HomePage() {
   const products = await getproduct();
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-indigo-100 to-white p-6">
-      <h1 className="text-4xl font-bold mb-6 text-indigo-700">🛍️ All Products</h1>
+    <main className="min-h-screen bg-gradient-to-b from-green-50 via-lime-100 to-red-50 p-8">
+     <h1 className="text-4xl font-bold text-center text-red-800">🛍️ All Products </h1>
 
       {products.length === 0 ? (
-        <p className="text-gray-500 text-lg">No products available. Try adding one.</p>
+        <p className="text-center text-gray-600 text-lg">
+          No products available. Add one from the form.
+        </p>
       ) : (
-        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-white border border-gray-200 p-5 rounded-lg shadow hover:shadow-md transition"
+              className="bg-white border border-green-200 p-5 rounded-2xl shadow hover:shadow-lg transition duration-300"
             >
-              <h2 className="text-xl font-semibold text-purple-800 mb-1">
+              <h2 className="text-xl font-semibold text-red-700 mb-1">
                 {product.name}
               </h2>
               <p className="text-green-700 font-medium text-lg mb-1">

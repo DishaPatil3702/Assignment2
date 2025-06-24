@@ -28,28 +28,28 @@ export default function UserPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 to-blue-100 p-6">
-      <div className="max-w-md mx-auto bg-white p-6 rounded-xl shadow-md">
-        <h1 className="text-2xl font-bold mb-4 text-purple-800">
-          📝 Add a New Product
+    <div className="min-h-screen bg-gradient-to-tr from-green-100 via-lime-50 to-red-100 py-10 px-4">
+      <div className="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-2xl">
+        <h1 className="text-3xl font-bold text-center text-green-700 mb-6">
+          🍀 Add Your Product
         </h1>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
           <input
             {...register('name')}
-            placeholder="Product name e.g. Smartphone"
-            className="w-full p-3 border border-purple-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-400"
+            placeholder="Product name e.g. Camera"
+            className="w-full p-3 border border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 shadow"
           />
           <input
             {...register('price')}
-            placeholder="Product price ₹"
-            className="w-full p-3 border border-purple-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-400"
+            placeholder="Price ₹"
+            className="w-full p-3 border border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 shadow"
           />
           <button
             type="submit"
-            className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition-all w-full"
+            className="w-full bg-gradient-to-r from-green-600 to-red-500 text-white font-semibold py-2 rounded-lg hover:from-green-700 hover:to-red-600 transition"
           >
-            Upload Product
+            ➕ Add Product
           </button>
         </form>
       </div>
